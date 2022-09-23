@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Page.dart';
+import 'PageWithBottomBar.dart';
 
 void main() {
   runApp(const MyApp());

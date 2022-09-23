@@ -53,7 +53,7 @@ class _PageWithBottomBarState extends State<PageWithBottomBar> {
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          label: 'Profile',
+          label: 'Main',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
@@ -70,14 +70,11 @@ class _PageWithBottomBarState extends State<PageWithBottomBar> {
         onGenerateRoute: (settings){
           Widget widget =MainScreen();
           if (settings.name == "/main"){
-            currentIndex = 0;
             widget = MainScreen();
           } else if (settings.name == "/settings"){
-            currentIndex = 1;
             widget = Settings();
           }
           else if (settings.name == "/settings/profile"){
-            currentIndex = 2;
             widget = ProfileSettings();
           }
           return MaterialPageRoute(builder: (context)=> widget,settings: settings);
